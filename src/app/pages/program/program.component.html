@@ -1,0 +1,75 @@
+<section class="bg-[#8830C205]">
+  <h2 class="px-7.5 py-10 lg:px-25 lg:py-20 font-bold text-[32px]">Our Programs</h2>
+</section>
+<section class="px-7.5 py-10 lg:px-25 lg:py-20 bg-[#FDFDFD]">
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-2.5 gap-y-10">
+    <div *ngFor="let program of programs" class="font-medium mx-auto">
+      <img
+        class="lg:w-98 max-h-51 rounded-xl object-cover"
+        [src]="program.pic"
+        alt=""
+      />
+      <div class="lg:w-98 gap-3.5 flex flex-col">
+        <h4 class="text-[18px]">{{ program.title }}</h4>
+        <div>
+          <p class="text-[#676767] text-[14px]">{{ program.partners }}</p>
+          <p class="text-[#676767] text-[14px]">
+            {{ program.desc }}
+          </p>
+        </div>
+        <p
+          class="text-[#B77AE3] font-bold cursor-pointer"
+          (click)="goToProgram(program)"
+        >
+          Read more
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="px-7.5 py-10 lg:px-25 lg:py-20 bg-[#FDFDFD] ja">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+    <div class="flex flex-col gap-3">
+      <h3 class="font-bold text-xl ja">Direct Bank Transfer</h3>
+      <div class="bg-[#F9FAFB] p-8 flex justify-between rounded-[4px] h-55">
+        <div class="flex flex-col gap-3.5 ja">
+          <p class="ja">Account Number</p>
+          <p class="ja">Beneficiary</p>
+          <br />
+          <p class="ja mt-6">Bank</p>
+        </div>
+        <div class="flex flex-col gap-3.5 font-semibold text-[18px]">
+          <p class="ja">3001149742</p>
+          <p class="ja">
+            GOD-LOVE 360 <br />
+            DEGREE EMPOWERMENT <br />
+            FOUNDATION
+          </p>
+          <p class="ja">Access Bank</p>
+        </div>
+        <div class="cursor-pointer" (click)="copyToClipboard('3001149742')">
+          <img src="assets/programs/copy.svg" alt="" />
+        </div>
+        <div></div>
+      </div>
+    </div>
+    <div class="flex flex-col gap-3">
+      <h3 class="font-bold text-xl ja">Other Donation Methods</h3>
+      <div class="bg-[#F9FAFB] p-8 flex gap-10 rounded-[4px] h-55">
+        <div class="flex flex-col gap-3.5">
+          <p class="ja">Dollar</p>
+          <p class="ja">Pounds</p>
+          <p class="ja">Euro</p>
+          <p class="ja">Contact</p>
+        </div>
+        <div class="flex flex-col gap-3.5 font-semibold text-[18px]">
+          <p class="ja">3001149883</p>
+          <p class="ja">3001149900</p>
+          <p class="ja">3001149924</p>
+          <p class="ja">08020599870</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,548 @@
+<section class="pt-20 pb-5 bg-[#8830C205] relative">
+  <div class="absolute right-60 bottom-10 z-1">
+    <img src="assets/home/star.svg" alt="" />
+  </div>
+  <div class="absolute right-30 top-35 z-1">
+    <img src="assets/home/star.svg" alt="" />
+  </div>
+  <div class="absolute left-60 bottom-20 z-1">
+    <img src="assets/home/star.svg" alt="" />
+  </div>
+  <div class="absolute left-30 top-40 z-1">
+    <img src="assets/home/star.svg" alt="" />
+  </div>
+  <div class="flex flex-col items-center z-10 relative">
+    <div
+      class="flex px-4.5 py-3 bg-[#C9ADDD1A] rounded-[20px] gap-1 text-[#8830C2] font-[14px]"
+    >
+      <img src="assets/home/over200.svg" alt="" />
+      <p>Over 200 Benefactrices</p>
+    </div>
+    <div>
+      <h2 class="font-bold text-[50px] lg:text-[64px] text-center">
+        Less chase for wealth,
+        <br />
+        More chase for God
+      </h2>
+    </div>
+    <div class="flex flex-row gap-5">
+      <button class="grad1 text-[20px] px-4.5 py-3 rounded-xl text-[#FFFFFF]">
+        <div class="flex gap-2.5 items-center" routerLink="/donation">
+          <p>Donate Now</p>
+          <i class="fa-solid fa-heart"></i>
+        </div>
+      </button>
+      <button
+        class="bg-none border border-[#8830C24D] text-[20px] text-[#8830C2] px-4.5 py-3 rounded-xl"
+      >
+        <div class="flex gap-2.5 items-center" routerLink="/gallery">
+          <p>Our Gallery</p>
+          <i class="fa-regular fa-image"></i>
+        </div>
+      </button>
+    </div>
+  </div>
+</section>
+<section class="relative">
+  <div>
+    <img src="assets/home/ellipse1.svg" class="absolute top-0 w-full" alt="" />
+  </div>
+  <div>
+    <img
+      src="assets/home/ellipse2.svg"
+      class="absolute bottom-0 w-full"
+      alt=""
+    />
+  </div>
+  <div class="flex flex-row overflow-x-auto gap-5">
+    <div>
+      <img
+        class="max-w-140 h-69"
+        src="assets/programDets/pro2Img3.jpg"
+        alt=""
+      />
+    </div>
+    <div>
+      <img
+        class="max-w-140 h-69"
+        src="assets/programDets/pro1Img1.jpg"
+        alt=""
+      />
+    </div>
+    <div>
+      <img
+        class="max-w-140 h-69"
+        src="assets/programDets/pro1Img2.jpg"
+        alt=""
+      />
+    </div>
+    <div>
+      <img
+        class="max-w-140 h-69"
+        src="assets/programDets/pro1Img3.jpg"
+        alt=""
+      />
+    </div>
+    <div>
+      <img
+        class="max-w-140 h-69"
+        src="assets/programDets/pro1Img4.jpg"
+        alt=""
+      />
+    </div>
+    <div>
+      <img
+        class="max-w-140 h-69"
+        src="assets/programDets/pro1Img5.jpg"
+        alt=""
+      />
+    </div>
+    <div>
+      <img
+        class="max-w-140 h-69"
+        src="assets/programDets/pro2Img1.jpg"
+        alt=""
+      />
+    </div>
+  </div>
+</section>
+<section class="px-7.5 py-10 lg:px-25 lg:py-20 bg-[#FDFDFD]">
+  <div class="flex gap-12.5 flex-col lg:flex-row items-center">
+    <div [@slideInRight]="isVisible ? 'visible' : 'hidden'">
+      <img src="assets/home/img1.jpg" class="lg:max-w-160 max-w-90" alt="" />
+    </div>
+    <div class="flex flex-col gap-6">
+      <h3 class="text-[32px] font-bold">About GodLove</h3>
+      <p class="text-xl opacity-70">
+        Godlove 360 Degree Empowerment Foundation is a non-profit organization
+        committed to combating hunger, poverty, hopelessness and lack of
+        sustainable income. To achieve this, we are establishing a farming
+        education hub and a food bank and also partnering with others who share
+        our goal of a poverty free nation
+      </p>
+      <div>
+        <button
+          class="grad1 text-[20px] font-medium px-4.5 py-3 rounded-xl text-[#FFFFFF]"
+          [routerLink]="['/about']"
+        >
+          Read more
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="px-7.5 py-10 lg:px-25 lg:py-20">
+  <div class="flex gap-12.5 items-center justify-between flex-col lg:flex-row">
+    <div class="grid grid-cols-2 text-center items-stretch">
+      <!-- Volunteers -->
+      <div
+        class="p-7.5 lg:p-10 flex flex-col justify-center transition-all duration-300 cursor-pointer border-b border-r border-gray-300"
+        (mouseenter)="hoverIndex = 0"
+        (mouseleave)="hoverIndex = null"
+      >
+        <h3 class="text-[30px] lg:text-[62px] transition-all duration-300">
+          {{ hoverIndex === 0 ? "15+" : "10+" }}
+        </h3>
+        <p class="text-gray-600 text-base mt-2 lg:w-50.5">Volunteers</p>
+      </div>
+
+      <!-- Years -->
+      <div
+        class="p-7.5 lg:p-10 flex flex-col justify-center transition-all duration-300 cursor-pointer border-b border-gray-300"
+        (mouseenter)="hoverIndex = 1"
+        (mouseleave)="hoverIndex = null"
+      >
+        <h3
+          class="text-[30px] lg:text-[62px] transition-all duration-300 lg:w-50.5"
+        >
+          {{ hoverIndex === 1 ? "5" : "4" }}
+        </h3>
+        <p class="text-gray-600 text-base mt-2">Years</p>
+      </div>
+
+      <!-- Benefactors -->
+      <div
+        class="p-7.5 lg:p-10 flex flex-col justify-center transition-all duration-300 cursor-pointer border-r border-gray-300"
+        (mouseenter)="hoverIndex = 2"
+        (mouseleave)="hoverIndex = null"
+      >
+        <h3
+          class="text-[30px] lg:text-[62px] transition-all duration-300 lg:w-50.5"
+        >
+          {{ hoverIndex === 2 ? "1,200+" : "1,000+" }}
+        </h3>
+        <p class="text-gray-600 text-base mt-2">Benefactors</p>
+      </div>
+
+      <!-- Cities -->
+      <div
+        class="p- 7.5 lg:p-10 flex flex-col justify-center transition-all duration-300 cursor-pointer"
+        (mouseenter)="hoverIndex = 3"
+        (mouseleave)="hoverIndex = null"
+      >
+        <h3
+          class="text-[30px] lg:text-[62px] transition-all duration-300 lg:w-50.5"
+        >
+          {{ hoverIndex === 3 ? "12+" : "10+" }}
+        </h3>
+        <p class="text-gray-600 text-base mt-2">Cities</p>
+      </div>
+    </div>
+
+    <div class="flex flex-col gap-6 max-w-138.5">
+      <h3 class="text-[32px] font-bold">We have touched thousand of lives</h3>
+      <p class="opacity-70 font-bold leading-10">
+        Over the years the organization has implemented several projects that
+        address issues around migration, Public health, Education, Democratic
+        Governace. Livelihood, Preventing violence & extremism and climate
+        change.
+      </p>
+    </div>
+  </div>
+</section>
+<section class="px-7.5 py-10 lg:px-25 lg:py-20">
+  <div class="flex-col gap-12.5 items-center">
+    <h3 class="text-[32px] font-medium mb-10">Our Beneficiary NGOs</h3>
+    <div class="flex flex-col lg:flex-row-reverse gap-6 justify-between">
+      <div class="grid grid-cols-2 gap-2.5">
+        <div class="p-5 border-[0.4px] max-w-61.5 rounded-xl">
+          <div class="flex flex-col gap-6.5">
+            <div><img src="assets/home/cashicon.svg" alt="" /></div>
+            <div class="flex flex-col gap-2.5">
+              <h3 class="font-medium">Become a volunteer</h3>
+              <p class="opacity-60">
+                Help make a difference and touh so many lives in
+              </p>
+            </div>
+            <p class="text-[#B77AE3] cursor-pointer" routerLink="/contact-us">
+              Read More
+            </p>
+          </div>
+        </div>
+        <div class="p-5 border-[0.5px] max-w-61.5 rounded-xl">
+          <div class="flex flex-col gap-6.5">
+            <div><img src="assets/home/human-icon.svg" alt="" /></div>
+            <div class="flex flex-col gap-2.5">
+              <h3 class="font-medium">Become a volunteer</h3>
+              <p class="opacity-60">
+                Help make a difference and touh so many lives in
+              </p>
+            </div>
+            <p class="text-[#B77AE3] cursor-pointer" routerLink="/contact-us">
+              Read More
+            </p>
+          </div>
+        </div>
+        <div class="p-5 border-[0.5px] max-w-61.5 rounded-xl">
+          <div class="flex flex-col gap-6.5">
+            <div><img src="assets/home/box-icon.svg" alt="" /></div>
+            <div class="flex flex-col gap-2.5">
+              <h3 class="font-medium">Become a volunteer</h3>
+              <p class="opacity-60">
+                Help make a difference and touh so many lives in
+              </p>
+            </div>
+            <p class="text-[#B77AE3] cursor-pointer" routerLink="/contact-us">
+              Read More
+            </p>
+          </div>
+        </div>
+        <div class="p-5 border-[0.5px] max-w-61.5 rounded-xl">
+          <div class="flex flex-col gap-6.5">
+            <div><img src="assets/home/cashicon.svg" alt="" /></div>
+            <div class="flex flex-col gap-2.5">
+              <h3 class="font-medium">Become a volunteer</h3>
+              <p class="opacity-60">
+                Help make a difference and touh so many lives in
+              </p>
+            </div>
+            <p class="text-[#B77AE3] cursor-pointer" routerLink="/contact-us">
+              Read More
+            </p>
+          </div>
+        </div>
+      </div>
+      <p class="opacity-70 font-bold leading-10 lg:max-w-140">
+        Over the years the organization has implemented several projects that
+        address issues around migration, Public health, Education, Democratic
+        Governance. Livelihood, Preventing violence & extremism and climate
+        change. Between 2023 and 2025, we have partnered with credible NGOs from
+        different locations in Nigeria serving their communities. We are also
+        one of the sponsors of Project 1,000 mission churches, Abuja. That is
+        involve in relief outreaches to disaster stricken communities.
+      </p>
+    </div>
+  </div>
+</section>
+<section class="px-7.5 py-10 lg:px-25 lg:py-20">
+  <h2 class="text-[32px] font-bold">Upcoming Events</h2>
+  <div class="container mx-auto p-4 bg-white">
+    <div class="flex flex-col md:flex-row gap-4">
+      <div class="max-w-90 max-h-118 md:w-1/2">
+        <img
+          [src]="currentImage"
+          alt="Event Poster"
+          class="w-full h-full transition-opacity duration-300"
+          [ngClass]="{
+            'opacity-100': currentImage,
+            'opacity-0': !currentImage
+          }"
+        />
+      </div>
+      <div class="w-full">
+        <div class="space-y-4">
+          <div
+            class="border border-gray-300 px-7.5 py-5 rounded-lg hover:bg-[#C9ADDD1A] hover:border-0 cursor-pointer flex justify-between group"
+            (mouseenter)="currentImage = 'assets/home/char1.png'"
+            (mouseleave)="currentImage = 'assets/home/char1.png'"
+          >
+            <div
+              class="flex flex-col gap-2.5 opacity-70 group-hover:opacity-100"
+            >
+              <p class="text-gray-600">Time: 10:00 AM to 01:00 PM</p>
+              <h3
+                class="text-lg font-semibold text-[#000000CC] group-hover:text-[#8830C2]"
+              >
+                TEFAP x QUALITY FOOD AFRICA
+              </h3>
+            </div>
+            <div>
+              <div
+                class="flex text-sm flex-col-reverse items-center bg-[#514E53] group-hover:bg-[#FD5A5A] px-3 py-0.75 rounded-[5px]"
+              >
+                <p class="text-[#FFFFFF]">MAR</p>
+                <p class="text-[#FFFFFF] text-[21px]">7</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="border border-gray-300 px-7.5 py-5 rounded-lg hover:bg-[#C9ADDD1A] hover:border-0 cursor-pointer flex justify-between group"
+            (mouseenter)="currentImage = 'assets/home/char2.png'"
+            (mouseleave)="currentImage = 'assets/home/char1.png'"
+          >
+            <div
+              class="flex flex-col gap-2.5 opacity-70 group-hover:opacity-100"
+            >
+              <p class="text-gray-600">Time: 10:00 AM to 01:00 PM</p>
+              <h3
+                class="text-lg font-semibold text-[#000000CC] group-hover:text-[#8830C2]"
+              >
+                TEFAP x QUALITY FOOD AFRICA
+              </h3>
+            </div>
+            <div>
+              <div
+                class="flex text-sm flex-col-reverse items-center bg-[#514E53] group-hover:bg-[#FD5A5A] px-3 py-0.75 rounded-[5px]"
+              >
+                <p class="text-[#FFFFFF]">MAR</p>
+                <p class="text-[#FFFFFF] text-[21px]">7</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="border border-gray-300 px-7.5 py-5 rounded-lg hover:bg-[#C9ADDD1A] hover:border-0 cursor-pointer flex justify-between group"
+            (mouseenter)="currentImage = 'assets/home/char3.png'"
+            (mouseleave)="currentImage = 'assets/home/char1.png'"
+          >
+            <div
+              class="flex flex-col gap-2.5 opacity-70 group-hover:opacity-100"
+            >
+              <p class="text-gray-600">Time: 10:00 AM to 01:00 PM</p>
+              <h3
+                class="text-lg font-semibold text-[#000000CC] group-hover:text-[#8830C2]"
+              >
+                TEFAP x QUALITY FOOD AFRICA
+              </h3>
+            </div>
+            <div>
+              <div
+                class="flex text-sm flex-col-reverse items-center bg-[#514E53] group-hover:bg-[#FD5A5A] px-3 py-0.75 rounded-[5px]"
+              >
+                <p class="text-[#FFFFFF]">MAR</p>
+                <p class="text-[#FFFFFF] text-[21px]">7</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="border-[0.5px] border-gray-300 px-7.5 py-5 rounded-lg hover:bg-[#C9ADDD1A] hover:border-0 cursor-pointer flex justify-between group"
+            (mouseenter)="currentImage = 'assets/home/char4.png'"
+            (mouseleave)="currentImage = 'assets/home/char1.png'"
+          >
+            <div
+              class="flex flex-col gap-2.5 opacity-70 group-hover:opacity-100"
+            >
+              <p class="text-gray-600">Time: 10:00 AM to 01:00 PM</p>
+              <h3
+                class="text-lg font-semibold text-[#000000CC] group-hover:text-[#8830C2]"
+              >
+                TEFAP x QUALITY FOOD AFRICA
+              </h3>
+            </div>
+            <div>
+              <div
+                class="flex text-sm flex-col-reverse items-center bg-[#514E53] group-hover:bg-[#FD5A5A] px-3 py-0.75 rounded-[5px]"
+              >
+                <p class="text-[#FFFFFF]">MAR</p>
+                <p class="text-[#FFFFFF] text-[21px]">7</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="px-7.5 py-10 lg:px-25 lg:py-20 bg-[#FDFDFD]">
+  <h2 class="pb-10 font-bold text-[32px]">Learn About Our Programs</h2>
+  <div class="overflow-x-auto flex flex-row gap-10 scrol">
+    <div *ngFor="let program of programs">
+      <div class="font-medium">
+        <img class="max-w-82 max-h-51 rounded-xl" [src]="program.pic" alt="" />
+        <div class="gap-3.5 flex flex-col">
+          <h4 class="text-[18px]">{{ program.title }}</h4>
+          <div>
+            <p class="text-[#676767] text-[14px]">{{ program.partners }}</p>
+            <p class="text-[#676767] text-[14px]">
+              {{ program.desc }}
+            </p>
+          </div>
+          <a class="text-[#B77AE3] font-bold" href="">Read more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="px-7.5 py-10 lg:px-25 lg:py-20">
+  <h2 class="pb-6 font-bold text-[32px]">Telling Our Stories With Image</h2>
+  <div class="grid grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-5">
+    <img
+      src="assets/home/sto1.jpg"
+      class="row-span-2 h-full object-cover rounded-xl"
+      alt=""
+    />
+    <img
+      src="assets/home/sto2.jpg"
+      class="row-span-2 h-full object-cover rounded-xl"
+      alt=""
+    />
+    <img
+      src="assets/home/sto3.jpg"
+      class="h-full object-cover rounded-xl"
+      alt=""
+    />
+    <img
+      src="assets/home/sto4.jpg"
+      class="h-full object-cover rounded-xl"
+      alt=""
+    />
+    <img
+      src="assets/home/sto5.jpg"
+      class="col-span-2 h-60 w-full object-cover rounded-xl"
+      alt=""
+    />
+  </div>
+</section>
+<section class="px-7.5 py-10 lg:px-25 lg:py-20">
+  <h2 class="pb-10 font-bold text-[32px]">Frequently Asked Questions</h2>
+  <div class="flex lg:flex-row flex-col">
+    <img class="max-w-152.5" src="assets/home/faq.png" alt="" />
+    <!-- FAQ Section -->
+    <div class="flex flex-col gap-4 flex-1">
+      <h2 class="text-2xl font-bold mb-2">Frequently Asked Questions</h2>
+
+      <div *ngFor="let faq of faqs; let i = index">
+        <div
+          class="border-[0.6px] border-[#8830C24D] rounded-lg p-4 transition-all duration-300 cursor-pointer"
+          (click)="toggle(i)"
+        >
+          <!-- Question -->
+          <div class="flex justify-between items-center">
+            <p [class.text-[#8830C2]]="faq.open" class="font-medium">
+              {{ faq.question }}
+            </p>
+            <span
+              [ngClass]="
+                faq.open
+                  ? 'bg-[#8830C2] text-white'
+                  : 'bg-gray-300 text-gray-800'
+              "
+              class="w-6 h-6 flex items-center justify-center rounded transition-colors duration-300"
+            >
+              {{ faq.open ? "−" : "+" }}
+            </span>
+          </div>
+
+          <!-- Answer with smooth expand/collapse -->
+          <div
+            class="overflow-hidden transition-all duration-300 ease-in-out"
+            [style.maxHeight]="faq.open ? '500px' : '0px'"
+          >
+            <p class="mt-2 text-gray-600 text-sm leading-relaxed">
+              {{ faq.answer }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section
+  class="px-7.5 py-10 lg:px-25 lg:py-25 flex flex-col lg:flex-row justify-between bg-[url('/assets/contact/bg1.png')] bg-center gap-10 lg:gap-0"
+>
+  <div class="max-w-95">
+    <h2 class="text-[32px] font-medium pb-2">Send us a message</h2>
+    <div class="flex flex-col gap-1">
+      <p class="text-xl opacity-60">
+        Have questions or want to get invoved? We’d love to hear from you! Reach
+        out to us for inquiries, partnerships or support.
+      </p>
+      <div class="flex flex-col gap-2">
+        <div>
+          <p>123, Impact Street, Lagos. Nigeria.</p>
+        </div>
+        <div>
+          <p>info&#64;God’slove.org</p>
+        </div>
+        <div>
+          <p>+234 801 123 4567</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="flex flex-col gap-8">
+    <form action="" class="grid grid-cols-2 gap-5">
+      <input
+        type="text"
+        class="bg-[#F0EFF0CC] px-5 py-4 rounded-[8px] [&::placeholder]:opacity-40"
+        placeholder="Full Name"
+      />
+      <input
+        type="email"
+        class="bg-[#F0EFF0CC] px-5 py-4 rounded-[8px] [&::placeholder]:opacity-40"
+        placeholder="Email"
+      />
+      <input
+        type="number"
+        class="bg-[#F0EFF0CC] px-5 py-4 rounded-[8px] [&::placeholder]:opacity-40"
+        placeholder="Phone Number"
+      />
+      <input
+        type="address"
+        class="bg-[#F0EFF0CC] px-5 py-4 rounded-[8px] [&::placeholder]:opacity-40"
+        placeholder="Address"
+      />
+      <textarea
+        name=""
+        id=""
+        placeholder="Message"
+        rows="8"
+        class="bg-[#F0EFF0CC] px-5 py-4 col-span-2 rounded-[8px] [&::placeholder]:opacity-40"
+      ></textarea>
+    </form>
+    <div>
+      <button class="grad1 text-[20px] px-4.5 py-3 rounded-xl text-[#FFFFFF]">
+        Submit
+      </button>
+    </div>
+  </div>
+</section>
