@@ -5,7 +5,7 @@
 <!--About Gods Love -->
 
 <section class="px-7.5 py-10 lg:px-25 lg:py-20 bg-[#FDFDFD]">
-  <div class="flex lg:flex-row flex-col gap-12.5 items-center">
+  <div class="flex xl:flex-row flex-col gap-12.5 items-center">
     <div class="flex flex-col gap-6">
       <h3 class="text-[32px] font-bold">About GodLove</h3>
       <p class="text-xl opacity-70">
@@ -22,13 +22,13 @@
         Nigeria), and Xtralarge Farms.
       </p>
     </div>
-    <div><img src="assets/home/img1.jpg" class="lg:max-w-160" alt="" /></div>
+    <div><img src="assets/home/img1.jpg" class="xl:max-w-120" alt="" /></div>
   </div>
 </section>
 
 <section class="px-7.5 py-10 lg:px-25 lg:py-20 bg-[#FDFDFD]">
-  <div class="flex lg:flex-row flex-col-reverse gap-12.5 items-center">
-    <div class="grid grid-cols-2 gap-2 w-full max-w-lg mx-auto">
+  <div class="flex xl:flex-row flex-col-reverse gap-12.5 items-center">
+    <div class="grid grid-cols-2 gap-2 w-full">
       <!-- Right image (tall) -->
       <div class="row-span-2">
         <img
@@ -40,18 +40,18 @@
       <!-- Top-left image -->
       <div class="col-span-1">
         <img
-          src="assets/about/grid1img2.jpg"
+          src="assets/about/aboutimg2.jpg"
           alt="Group 1"
-          class="rounded-lg object-cover w-full h-55"
+          class="rounded-lg object-cover w-full h-70"
         />
       </div>
 
       <!-- Bottom-left image -->
       <div class="col-span-1">
         <img
-          src="/assets/about/grid1img3.jpg"
+          src="/assets/about/aboutimg3.jpg"
           alt="Group 3"
-          class="rounded-lg object-cover w-full h-55"
+          class="rounded-lg object-cover w-full h-70"
         />
       </div>
     </div>
@@ -59,15 +59,15 @@
       <div class="flex flex-col gap-4">
         <h3 class="text-[32px] font-bold">Ambition</h3>
         <p class="text-xl opacity-70">
-          To establish a food bank and skills acquisition center in Telecom and
-          Urban Farming for 1,000 underserved people in Nigeria yearly
+          ALLEVIATING HUNGER & POVERTY committed to fighting food insecurity,
+          hunger, poverty, lack of sustainable income to meet basic needs.
         </p>
       </div>
       <div class="flex flex-col gap-4">
         <h3 class="text-[32px] font-bold">Vision</h3>
         <p class="text-xl opacity-70">
           To be the nation's leading poverty (hunger) alleviation organization
-          that enhances better life.
+          that enhances better life through skills acquisition in urban farming.
         </p>
       </div>
       <div class="flex flex-col gap-4">
@@ -94,7 +94,7 @@
 
 <!--OUR PRIMARY GOAL IS TO -->
 <section class="px-7.5 py-10 lg:px-25 lg:py-20 bg-[#FDFDFD]">
-  <div class="flex lg:flex-row flex-col gap-12.5 items-center">
+  <div class="flex xl:flex-row flex-col gap-12.5">
     <div class="flex flex-col gap-6">
       <div class="flex flex-col gap-4">
         <h3 class="text-[32px] font-bold">
@@ -121,13 +121,13 @@
         </p>
       </div>
     </div>
-    <div class="grid grid-cols-2 gap-2 w-full max-w-lg mx-auto">
+    <div class="grid grid-cols-2 gap-2 w-full">
       <!-- Top-left image -->
       <div class="col-span-1">
         <img
           src="assets/about/grid2img.jpg"
           alt="Group 1"
-          class="rounded-lg object-cover w-full h-55"
+          class="rounded-lg object-cover w-full h-70"
         />
       </div>
       <!-- Right image (tall) -->
@@ -135,7 +135,7 @@
         <img
           src="assets/about/grid2img3.jpg"
           alt="Group 2"
-          class="rounded-lg object-cover w-full h-full"
+          class="rounded-lg object-cover w-full h-142"
         />
       </div>
 
@@ -144,7 +144,7 @@
         <img
           src="/assets/about/grid2img2.jpg"
           alt="Group 3"
-          class="rounded-lg object-cover w-full h-55"
+          class="rounded-lg object-cover w-full h-70"
         />
       </div>
     </div>
@@ -163,35 +163,39 @@
   <div class="flex flex-col gap-6">
     <div class="flex flex-col gap-6">
       <p class="font-medium text-2xl">Board Members</p>
-      <div class="grid grid-cols-1 lg:grid-cols-4 gap-5 lg:gap-0">
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-20 xl:gap-0"
+      >
         <div
           *ngFor="let board of boards"
-          class="lg:max-w-[292px] max-h-[236px]"
+          class="lg:max-w-[292px] max-h-[236px] place-items-center"
         >
           <div class="w-full h-full overflow-hidden rounded-lg relative">
             <img class="object-cover w-full h-full" [src]="board.icon" alt="" />
-            <div
-              class="absolute bottom-5 left-[13%] flex flex-col items-center bg-[#ffffff] px-2.5 py-2 rounded-[6px] gap-1.25 w-56"
-            >
-              <p class="font-bold">{{ board.name }}</p>
-              <p class="opacity-60">{{ board.title }}</p>
-            </div>
+          </div>
+          <div
+            class="flex flex-col items-center bg-[#ffffff] px-2.5 py-2 rounded-[6px] gap-1.25 w-56"
+          >
+            <p class="font-bold">{{ board.name }}</p>
+            <p class="opacity-60">{{ board.title }}</p>
           </div>
         </div>
       </div>
     </div>
-    <div class="flex flex-col gap-6">
+    <div class="flex flex-col gap-6 mt-12">
       <p class="font-medium text-2xl">Team Members</p>
-      <div class="grid grid-cols-1 lg:grid-cols-4 gap-5 lg:gap-0">
-        <div *ngFor="let team of teams" class="lg:max-w-[292px] max-h-[236px]">
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-20 xl:gap-0"
+      >
+        <div *ngFor="let team of teams" class="lg:max-w-[292px] max-h-[236px] place-items-center">
           <div class="w-full h-full overflow-hidden rounded-lg relative">
             <img class="object-cover w-full h-full" [src]="team.icon" alt="" />
-            <div
-              class="absolute bottom-5 left-[13%] flex flex-col items-center bg-[#ffffff] px-2.5 py-2 rounded-[6px] gap-1.25 w-56"
-            >
-              <p class="font-bold">{{ team.name }}</p>
-              <p class="opacity-60">{{ team.title }}</p>
-            </div>
+          </div>
+          <div
+            class="flex flex-col items-center bg-[#ffffff] px-2.5 py-2 rounded-[6px] gap-1.25 w-56"
+          >
+            <p class="font-bold">{{ team.name }}</p>
+            <p class="opacity-60">{{ team.title }}</p>
           </div>
         </div>
       </div>

@@ -81,3 +81,53 @@ nav ul.menu.menu-open {
     display: block;
   }
 }
+
+.infinite-container {
+  padding: 30px 0;
+  margin: 60px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.infinite-wrapper {
+  display: flex;
+  width: 200%;
+  animation: slide 40s linear infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Move by one set */
+  }
+}
+
+.logos-set {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%; /* Each set takes half the container */
+  flex-shrink: 0;
+}
+
+.logo-item {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  align-items: center;
+  padding: 0 30px;
+  transition: transform 0.3s ease;
+}
+
+.logo-item:hover {
+  transform: translateY(-10px);
+}
+
+.logo-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+}

@@ -37,29 +37,22 @@ export class HomeComponent {
   currentImage: string = 'assets/home/char1.png';
   programs = [
     {
-      id: 1,
-      pic: 'assets/programs/img1.svg',
-      title: 'Telecom Business Empowerment Program',
-      partners: 'Affiliate Partner: TGR Telecom',
-      desc: 'We offer a 3-month training program to help low-income individuals start their own VTU (Virtual Top-Up) Telecom businesses.',
-    },
-    {
       id: 2,
-      pic: 'assets/programs/img2.svg',
+      pic: 'assets/programs/widow.jpg',
       title: 'Urban Farming & Agribusiness Training',
       partners: 'Affiliate Partners: AFAN & Xtralarge Farms',
       desc: 'Through our 3-month urban farming training, underserved individuals learn to cultivate, sustain, and grow income-generating farms in urban settings.',
     },
     {
       id: 3,
-      pic: 'assets/programs/img3.svg',
+      pic: 'assets/programs/widow-food.jpg',
       title: 'Quarterly Food Relief & Food Bank Operations',
       partners: 'Affiliate Partners: AFAN & Xtralarge Farms',
       desc: 'Our center also operates as a food bank, where we distribute food supplies every quarter to vulnerable groups',
     },
     {
       id: 4,
-      pic: 'assets/programs/img4.jpg',
+      pic: 'assets/programs/widow-health.jpg',
       title: 'Community Health Outreach & Wellness Education',
       partners: 'Affiliate Partners: AFAN & Xtralarge Farms',
       desc: 'We aim to support underserved Nigerians by offering:',
@@ -82,6 +75,29 @@ export class HomeComponent {
         'Is Godlove 360 foundation activities limited to certain age group?',
       answer: 'No, we welcome individuals of all ages.',
       open: false,
+    },
+  ];
+  logos = [
+    {
+      img: 'assets/home/logo1.jpg',
+    },
+    {
+      img: 'assets/home/logo2.jpg',
+    },
+    {
+      img: 'assets/home/logo3.jpg',
+    },
+    {
+      img: 'assets/home/logo4.jpg',
+    },
+    {
+      img: 'assets/home/logo5.jpg',
+    },
+    {
+      img: 'assets/home/logo6.jpg',
+    },
+    {
+      img: 'assets/home/logo7.jpg',
     },
   ];
   toggle(index: number) {

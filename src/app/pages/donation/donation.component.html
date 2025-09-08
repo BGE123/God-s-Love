@@ -3,7 +3,9 @@
 </section>
 
 <section class="px-7.5 py-10 lg:px-25 lg:py-20 bg-[#FDFDFD]">
-  <div class="grid grid-cols-1 lg:grid-cols-3 gap-2.5 gap-y-10">
+  <div
+    class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2.5 gap-y-10 place-items-center"
+  >
     <div *ngFor="let program of programs" class="font-medium mx-auto">
       <img
         class="lg:w-98 max-h-51 rounded-xl object-cover"
@@ -47,7 +49,7 @@
             DEGREE EMPOWERMENT <br />
             FOUNDATION
           </p>
-          <p class="ja">Access Bank</p>
+          <p class="ja">GTBank</p>
         </div>
         <div class="cursor-pointer" (click)="copyToClipboard('3001149742')">
           <img src="assets/programs/copy.svg" alt="" />

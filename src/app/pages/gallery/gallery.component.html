@@ -1,3 +1,15 @@
 <section class="bg-[#8830C205]">
   <h2 class="px-25 py-20 font-bold text-[32px]">Gallery</h2>
 </section>
+<section class="px-7.5 py-10 lg:px-25 lg:py-20 bg-[#FDFDFD]">
+  <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-20 xl:gap-4">
+    <div
+      *ngFor="let pic of pics"
+      class="lg:max-w-[292px] max-h-[236px] place-items-center"
+    >
+      <div class="w-full h-full overflow-hidden rounded-lg relative">
+        <img class="object-cover w-full h-full" [src]="pic.img" alt="" />
+      </div>
+    </div>
+  </div>
+</section>
