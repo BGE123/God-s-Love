@@ -31,7 +31,7 @@ export class AboutComponent {
       id: 4,
       icon: 'assets/about/bmem4.png',
       name: 'Johnson Adu',
-      title: 'Director (Founder)',
+      title: 'Director (Agric Expert)',
     },
   ];
   teams = [
