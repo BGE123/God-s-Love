@@ -57,5 +57,11 @@ export class GalleryComponent {
     {
       img: 'assets/gallery/pic16.jpg',
     },
+    {
+      img: 'assets/home/v1.jpg',
+    },
+    {
+      img: 'assets/home/v2.jpg',
+    },
   ];
 }
