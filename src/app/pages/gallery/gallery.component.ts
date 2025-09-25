@@ -69,5 +69,6 @@ export class GalleryComponent {
     {
       img: 'assets/gallery/pic18.jpg',
     },
+    
   ];
 }
